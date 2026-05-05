@@ -1,0 +1,1 @@
+"# pmcshop-webstore-skin-version" 
