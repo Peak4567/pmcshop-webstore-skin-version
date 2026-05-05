@@ -1,0 +1,29 @@
+ .grid-dots-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+    overflow: hidden;
+  }
+
+  .dot {
+    position: absolute;
+    border-radius: 9999px;
+    background: radial-gradient(circle, rgba(0, 200, 255, 0.4), rgba(0, 160, 255, 0.1));
+    filter: blur(2px);
+    opacity: 0.6;
+    animation: floatUpDown 10s ease-in-out infinite;
+    pointer-events: auto;
+    transition: transform 0.4s, opacity 0.4s;
+  }
+
+  @keyframes floatUpDown {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-40px); }
+  }
+
+  .bubble-pop {
+    transform: scale(1.5);
+    opacity: 0;
+  }

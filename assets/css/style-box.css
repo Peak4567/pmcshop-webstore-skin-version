@@ -1,0 +1,27 @@
+.box-animate {
+  opacity: 0;
+  transform: translate(0, 50%) scale(0.8);
+  transition: transform 0.8s ease, opacity 0.8s ease;
+}
+
+.box-animate.show {
+    opacity: 1;
+    transform: none;
+    /* กลับไปใช้ translate จาก Tailwind */
+}
+
+@keyframes pop-in {
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.img-pop {
+    animation: pop-in 0.6s ease-out forwards;
+}
